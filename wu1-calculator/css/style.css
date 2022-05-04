@@ -19,6 +19,8 @@ body {
 
 main {
 
+
+
 }
 
 main input{
@@ -34,7 +36,25 @@ main input{
     border-radius:4px;
 }
 
+main button{
+  font-size: 80px;
+  border-radius: 5%;
+  background-color: #FF97D3;
+}
+
+main input{
+  display: grid;
+  grid-gap: 10px;
+  grid-template: auto;
+  width: 80%;
+  height: 100px;
+}
+
 main section#keyBoard {
+  display: grid;
+  grid-gap: 10px;
+  grid-template: auto;
+  width: 80%;
     /** Grid eller liknade */
 }
 
