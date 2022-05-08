@@ -23,7 +23,15 @@ function buttonClick(e) {
   }
 }
 
-const operator = prompt('Enter operator to perform the calculation ( either +, -, * or / ): '); 
+const number = 0
+const number2 = 0
+
+/**
+ *  Lägger till siffra på display.
+ */
+function addDigit(digit) {
+  
+}
 
 /**
  * Lägger till decimaltecken
@@ -34,7 +42,20 @@ function addComma() {}
  * Sparar operator.
  * +, -, *, /
  */
-function setOperator(operator) {}
+function setOperator(operator) {
+  if (button.value == "+") {
+    sum = number + number2
+  }
+  if (button.value == "-") {
+    res = number - number2
+  }
+  if (button.value == "/") {
+    kvot = number / number2
+  }
+  if (button.value == "*") {
+    prod = number * number2
+  }
+}
 
 /**
  * Beräknar ovh visar resultatet på displayen.
