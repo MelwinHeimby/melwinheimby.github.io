@@ -11,8 +11,13 @@
 </head>
 
 <body>
+
     <main>
-        <input type="text" id = 'lcd' disabled="disabled">
+        
+        <input type='text' id='result' class ='screen' style="text-align: right;">
+    
+        <input type='button' value = 'C' onclick="clearScreen()" class="clear"/>
+
         <section id = 'keyBoard'>
             <button value="7" id='b7'>7</button>
             <button value="8" id='b8'>8</button>
@@ -33,18 +38,6 @@
             <button value="0" id='b0'>0</button>
             <button id='enter'>=</button>
             <button value="/" id='div'>/</button>
-
-            <button id='clear' style = 'grid-column: span 4;'>CLEAR</button>
         </section>
-
     </main>
-
 </body>
-    <script>
-        if('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js?v=1.5');
-            });
-        }
-    </script>
-    </html>
