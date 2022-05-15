@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -10,39 +10,52 @@
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-
 }
 
 main {
-
-
-
 }
 
-main input{
-    width: 100%;
-    font-size: 3.5rem;
-    margin-bottom:10px;
-    background-color: black;
-    color: green;
-    text-align: right;
-    padding: 10px 4px 10px 4px;
-    font-family: lcd;
-    border: 1px solid yellow;
-    border-radius:4px;
+#result {
+  width: 80%;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  background-color: black;
+  color: green;
+  text-align: right;
+  padding: 10px 4px 10px 4px;
+  border: 1px solid yellow;
+  border-radius: 4px;
+  position: relative;
+  left: 10%;
 }
 
-main button{
-  font-size: 80px;
-  border-radius: 5%;
-  background-color: #FF97D3;
+#keyBoard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+  margin: auto;
+  width: 80%;
 }
 
-main input{
+#keyBoard {
+  border: solid;
+  border-radius: 5px;
+  border-color: pink;
+  background-color: black;
+}
+
+#keyBoard input {
+  background-color: pink;
+  padding: 50px;
+  font-size: 50px;
+}
+
+#result {
   display: grid;
   grid-gap: 10px;
   grid-template: auto;
@@ -50,31 +63,18 @@ main input{
   height: 100px;
 }
 
-main section#keyBoard {
-  display: grid;
-  grid-gap: 10px;
-  grid-template: auto;
-  width: 80%;
-    /** Grid eller liknade */
-}
-
 @media (max-width: 767px) {
-    body {
+  body {
+  }
 
-    }
+  main {
+  }
 
-    main {
-
-    }
-
-    main input{
-
-    }
+  main input {
+  }
 }
 
 @media (max-width: 339px) {
-    main {
-
-    }
-
+  main {
+  }
 }

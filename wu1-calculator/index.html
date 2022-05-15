@@ -14,30 +14,29 @@
 
     <main>
         
-        <input type='text' id='result' class ='screen' style="text-align: right;">
+        <input type='text' id='result'>
     
-        <input type='button' value = 'C' onclick="clearScreen()" class="clear"/>
-
         <section id = 'keyBoard'>
-            <button value="7" id='b7'>7</button>
-            <button value="8" id='b8'>8</button>
-            <button value="9" id='b9'>9</button>
-            <button value="+" id='add'>+</button>
+            <input type="button" value="7"  onClick="display('7')"></input>
+            <input type="button" value="8"  onClick="display('8')"></input>
+            <input type="button" value="9"  onClick="display('9')"></input>
+            <input type="button" value="/"  onClick="display('/')"></input>
+        
+            <input type="button" value="4"  onClick="display('4')"></input>
+            <input type="button" value="5"  onClick="display('5')"></input>
+            <input type="button" value="6"  onClick="display('6')"></input>
+            <input type="button" value="*"  onClick="display('*')"></input>
+        
+            <input type="button" value="1"  onClick="display('1')"></input>
+            <input type="button" value="2"  onClick="display('2')"></input>
+            <input type="button" value="3"  onClick="display('3')"></input>
+            <input type="button" value="-"  onClick="display('-')"></input>
+        
+            <input type="button" value="0"  onClick="display('0')"></input>
+            <input type="button" value="."  onClick="display('.')"></input>
+            <input type="button" value= "="  onClick="solve()"></input>
+            <input type="button" value="+" onClick="display('+')"></input>
+            <input type="button" value = 'Clear' onclick="clearScreen()"></input>
+    </section>
 
-            <button value="4" id='b4'>4</button>
-            <button value="5" id='b5'>5</button>
-            <button value="6" id='b6'>6</button>
-            <button value="-" id='sub'>-</button>
-
-            <button value="1" id='b1'>1</button>
-            <button value="2" id='b2'>2</button>
-            <button value="3" id='b3'>3</button>
-            <button value="*" id='mul'>x</button>
-
-            <button value="." id='comma'>,</button>
-            <button value="0" id='b0'>0</button>
-            <button id='enter'>=</button>
-            <button value="/" id='div'>/</button>
-        </section>
-    </main>
 </body>
