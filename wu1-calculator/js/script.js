@@ -10,6 +10,8 @@ function solve() {
   return y;
 }
 
-function clearScreen() {
+const clearScreen = () => {
   document.getElementById("result").value = "";
 }
+
+
