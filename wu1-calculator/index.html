@@ -5,7 +5,7 @@
 <head>
     <title>Kalkylator</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css?v=1.8">
+    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/script.js"></script>
 </head>
@@ -14,7 +14,7 @@
 
     <main>
         
-        <input type='text' id='result'>
+        <input  type='text' id='result' disabled='disabled'>
     
         <section id = 'keyBoard'>
             <input type="button" value="7"  onClick="display('7')"></input>
@@ -36,6 +36,7 @@
             <input type="button" value="."  onClick="display('.')"></input>
             <input type="button" value= "="  onClick="solve()"></input>
             <input type="button" value="+" onClick="display('+')"></input>
+            
             <input type="button" value = 'Clear' onclick="clearScreen()"></input>
             <input type="button" value="("  onClick="display('(')"></input>
             <input type="button" value=")"  onClick="display(')')"></input>
@@ -50,9 +51,8 @@
             <input type="button" value="PI"  onClick="display('Math.PI')"></input>
             <input type="button" value="Ln"  onClick="display('Math.log(')"></input>
             <input type="button" value="Lg"  onClick="display('Math.log10(')"></input>
-            
-
-            
         </section>
 
 </body>
+
+</html>
