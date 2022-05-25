@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: monospace;
 }
 
 @font-face {
@@ -14,67 +15,89 @@ html {
 }
 
 body {
+  height: 100vh;
 }
 
 main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #result {
-  width: 80%;
-  font-size: 3.5rem;
+  height: 10vh;
+  width: 80vw;
+  font-size: 5.5rem;
   margin-bottom: 10px;
   background-color: black;
   color: green;
   text-align: right;
   padding: 10px 4px 10px 4px;
-  border: 1px solid pink;
+  border: 1px solid #FC2296;
   border-radius: 4px;
-  position: relative;
-  left: 10%;
+  margin: auto;
 }
 
 #keyBoard {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: calc(82vh/7);
+  grid-auto-columns: calc(100%/4);
   grid-gap: 10px;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: auto;
-  width: 80%;
-}
-
-#keyBoard {
+  width: 80vw;
+  overflow: hidden;
+  height: 90vh;
   border: solid;
   border-radius: 5px;
-  border-color: pink;
+  border-color: #FC2296;
   background-color: black;
 }
 
 #keyBoard input {
-  background-color: pink;
-  padding: 50px;
+  background-color: #FC2296;
+  padding: auto;
   font-size: 50px;
+
 }
 
-#result {
-  display: grid;
-  grid-gap: 10px;
-  grid-template: auto;
-  width: 80%;
-  height: 100px;
-}
+#keyBoard input:hover{opacity: 0.7}
 
-@media (max-width: 767px) {
+#keyBoard input:active{opacity: 0.3}
+
+@media (max-width: 930px) {
   body {
   }
 
   main {
   }
 
-  main input {
+  #keyBoard {
+    width: 100vw;
+  }
+
+  #result {
+    width: 100vw;
+    padding: 0;
+  }
+
+  #keyBoard input {
+    padding: auto;
+    font-size: 25px;
   }
 }
 
-@media (max-width: 339px) {
+@media (max-width: 420px) {
   main {
+  }
+
+  #keyBoard input {
+    padding: auto;
+    font-size: 20px;
   }
 }
