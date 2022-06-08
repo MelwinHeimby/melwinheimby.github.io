@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kalkylator</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/script.js"></script>
+    
+    <!-- pwa settings -->
+    <link rel="manifest" href="manifest.json?v=1.2">
+    <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" sizes="192x192" href="icons/icon-192x192.png">
+    <!-- IOS/IPhone/IPad -->
+    <link rel="apple-touch-startup-image" href="icons/icon-192x192.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icons/icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="icons/icon-180x180.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Calculator">
+    <!-- Fixar länkproblem på iPhone som hoppar till safari -->
+    <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+</head>
+
+<body>
+
+    <main>
+        
+        <input  type='text' id='result' disabled='disabled'>
+    
+        <section id = 'keyBoard'>
+            <input type="button" value="7"  onClick="display('7')"></input>
+            <input type="button" value="8"  onClick="display('8')"></input>
+            <input type="button" value="9"  onClick="display('9')"></input>
+            <input type="button" value="/"  onClick="display('/')"></input>
+
+            <input type="button" value="4"  onClick="display('4')"></input>
+            <input type="button" value="5"  onClick="display('5')"></input>
+            <input type="button" value="6"  onClick="display('6')"></input>
+            <input type="button" value="*"  onClick="display('*')"></input>
+
+            <input type="button" value="1"  onClick="display('1')"></input>
+            <input type="button" value="2"  onClick="display('2')"></input>
+            <input type="button" value="3"  onClick="display('3')"></input>
+            <input type="button" value="-"  onClick="display('-')"></input>
+
+            <input type="button" value="0"  onClick="display('0')"></input>
+            <input type="button" value="."  onClick="display('.')"></input>
+            <input type="button" value= "="  onClick="solve()"></input>
+            <input type="button" value="+" onClick="display('+')"></input>
+            
+            <input type="button" value = 'Clear' onclick="clearScreen()"></input>
+            <input type="button" value="("  onClick="display('(')"></input>
+            <input type="button" value=")"  onClick="display(')')"></input>
+            <input type="button" value="sin("  onClick="display('Math.sin(')"></input>
+
+            <input type="button" value="Arcsin("  onClick="display('Math.asin(')"></input>
+            <input type="button" value="cos("  onClick="display('Math.cos(')"></input>
+            <input type="button" value="Arccos("  onClick="display('Math.acos(')"></input>
+            <input type="button" value="tan"  onClick="display('Math.tan(')"></input>
+
+            <input type="button" value="Arctan"  onClick="display('Math.atan(')"></input>
+            <input type="button" value="π"  onClick="display('Math.PI')"></input>
+            <input type="button" value="Ln"  onClick="display('Math.log(')"></input>
+            <input type="button" value="Lg"  onClick="display('Math.log10(')"></input>
+        </section>
+
+</body>
+<script>
+    if('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js?v=1.4');
+        });
+    }
+</script>
+</html>
