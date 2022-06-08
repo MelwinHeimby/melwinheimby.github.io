@@ -112,11 +112,10 @@ main {
   }
 
   #keyBoard input {
-    padding: 2px;
+    padding: auto;
     font-size: 20px;
     margin: -3px;
     aspect-ratio: 1 / 1;
-    width: 9rem;
   }
 
   #result{
